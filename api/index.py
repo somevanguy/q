@@ -5,7 +5,7 @@ greetmsg = 'A little thing i made to quickly manage stuff, source code: "https:/
 
 @app.route('/')
 def home():
-    if request.headers.get("User-Agent").find("WindowsPowerShell"):
+    if "WindowsPowerShell" in request.headers.get("User-Agent"):
         return f'Write-Output "{greetmsg}"', 200
     else:
         return greetmsg, 200
