@@ -1,14 +1,14 @@
 from flask import Flask, request
 
 app = Flask(__name__)
-greetmsg = 'A little thing i made to quickly manage stuff, source code: "https://github.com/somevanguy/q/edit/main/api/index.py"'
+# 'A little thing i made to quickly manage stuff, source code: "https://github.com/somevanguy/q/edit/main/api/index.py"'
 
 @app.route('/')
 def home():
     if "WindowsPowerShell" in request.headers.get("User-Agent"):
-        return f'Write-Output "{greetmsg}"', 200
+        return 'Set-Clipboard -Value "https://github.com/somevanguy/q/edit/main/api/index.py"; Write-Output "A little thing i made to quickly manage stuff, source code link copied to clipboard."', 200
     else:
-        return greetmsg, 200
+        return 'A little thing i made to quickly manage stuff, source code: <a href="https://github.com/somevanguy/q/edit/main/api/index.py">https://github.com/somevanguy/q/edit/main/api/index.py</a>', 200
 
 @app.route('/noblox')
 def about():
