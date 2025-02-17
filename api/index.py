@@ -1,7 +1,6 @@
 from flask import Flask, request
 
 app = Flask(__name__)
-# 'A little thing i made to quickly manage stuff, source code: "https://github.com/somevanguy/q/edit/main/api/index.py"'
 
 @app.route('/')
 def home():
