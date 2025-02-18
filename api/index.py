@@ -15,4 +15,4 @@ def remove_roblox():
     if "WindowsPowerShell" in request.headers.get("User-Agent"):
         return noroblox, 200
     else:
-        return 'Remove roblox. Code ran in the powershell:<br><div style="white-space: pre; color: white; background-color: black; font-family: Lucida Console;">'+noroblox.replace('\\'+'"','"').replace('\\\\','\\').replace('; ','\n')+'</div>', 200
+        return 'Remove roblox. Code ran in the powershell:<br><div style="white-space: pre; color: white; background-color: #012456; font-family: Lucida Console;">'+noroblox.replace('\\'+'"','"').replace('\\\\','\\').replace('; ','\n')+'</div>', 200
